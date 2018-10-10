@@ -1,3 +1,3 @@
 # Data-Structures-and-Algorithms
 
-Will be populated by links soon.
+1. [Challenge: Insert and shift an array](Challenges/ArrayShift)
