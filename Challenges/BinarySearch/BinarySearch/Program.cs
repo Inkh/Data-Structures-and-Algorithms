@@ -17,7 +17,7 @@ namespace BinarySearch
         }
 
         /// <summary>
-        /// Standard binary search on a sorted array.
+        /// Standard binary search.
         /// </summary>
         /// <param name="arr">Input array</param>
         /// <param name="val">Value to search for</param>
