@@ -2,21 +2,27 @@
 
 namespace BinarySearch
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             //Sample input. Expected output to be : 6
             int num = 150;
             int[] sortedArr = { 1, 3, 5, 6, 8, 10, 150, 320 };
-            Console.WriteLine(BinarySearch(sortedArr, num));
+            Console.WriteLine(BinarySearchArray(sortedArr, num));
 
             //Sample Input 2. Expected output to be : -1
             int[] emptyArr = { };
-            Console.WriteLine(BinarySearch(emptyArr, num));
+            Console.WriteLine(BinarySearchArray(emptyArr, num));
         }
 
-        static int BinarySearch(int[] arr, int val)
+        /// <summary>
+        /// Standard binary search on a sorted array.
+        /// </summary>
+        /// <param name="arr">Input array</param>
+        /// <param name="val">Value to search for</param>
+        /// <returns>Index of found value OR -1 if not found</returns>
+        public static int BinarySearchArray(int[] arr, int val)
         {
             int start = 0;
             int end = arr.Length - 1;

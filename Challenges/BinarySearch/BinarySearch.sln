@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "BinarySearch\BinarySearch.csproj", "{6425EF88-2216-40ED-8203-8467AFCFB7BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchTest", "BinarySearchTest\BinarySearchTest.csproj", "{88306B4F-DD7A-4BDC-8659-6CFFC62476CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6425EF88-2216-40ED-8203-8467AFCFB7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6425EF88-2216-40ED-8203-8467AFCFB7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6425EF88-2216-40ED-8203-8467AFCFB7BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88306B4F-DD7A-4BDC-8659-6CFFC62476CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88306B4F-DD7A-4BDC-8659-6CFFC62476CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88306B4F-DD7A-4BDC-8659-6CFFC62476CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88306B4F-DD7A-4BDC-8659-6CFFC62476CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
