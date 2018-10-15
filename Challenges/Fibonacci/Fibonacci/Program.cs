@@ -6,7 +6,10 @@ namespace Fibonacci
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Fibonacci");
+            Console.WriteLine("Input: 7");
+            Console.WriteLine("Expected: 13");
+            Console.WriteLine("Actual Output: ");
+            Console.WriteLine(FibonacciSequence(7));
         }
 
         /// <summary>
