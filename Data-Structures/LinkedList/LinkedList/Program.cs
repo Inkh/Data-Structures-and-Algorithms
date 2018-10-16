@@ -10,8 +10,11 @@ namespace LinkedList
             Console.WriteLine("Hello World!");
             LList myList = new LList(new Node(10));
             myList.AddAfter(new Node(10), new Node(20));
-            myList.AddAfter(new Node(20), new Node(30));
+            myList.AddAfter(new Node(10), new Node(30));
             myList.Print();
+
+            //Returns false
+            Console.WriteLine(myList.Includes(new Node(400)));
         }
     }
 }

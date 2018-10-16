@@ -109,6 +109,7 @@ namespace LinkedList.Classes
                 {
                     return true;
                 }
+                Current = Current.Next;
             }
 
             if (Current.Value.ToString() == node.Value.ToString())
