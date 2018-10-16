@@ -41,5 +41,50 @@ namespace LinkedList.Classes
             }
             Console.Write($"{Current.Value} ---> NULL");
         }
+
+        public void Append(Node node)
+        {
+            Current = Head;
+            while (Current.Next != null)
+            {
+                Current = Current.Next;
+            }
+            Current.Next = node;
+        }
+
+        public void AddBefore(Node targetNode, Node inputNode)
+        {
+            Current = Head;
+            if (Head.Value == targetNode.Value)
+            {
+                AddToStart(inputNode);
+                return;
+            }
+
+            while (Current.Next != null)
+            {
+                if (Current.Value == targetNode.Value)
+                {
+                    inputNode.Next = targetNode;
+                    Current.Next = inputNode;
+                    return;
+                }
+                Current = Current.Next;
+            }
+        }
+
+        public bool Includes(Node node)
+        {
+            Current = Head;
+            
+            while (Current.Next != null)
+            {
+                if (Current.Value == node.Value)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
