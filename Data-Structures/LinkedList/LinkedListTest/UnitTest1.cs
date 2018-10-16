@@ -35,19 +35,16 @@ namespace LinkedListTest
             Assert.True(newList.Includes(insertNode) == expected);
         }
 
-        [Theory]
-        [InlineData(true, 12)]
-        [InlineData(true, 48)]
-        [InlineData(true, 33)]
-        public void WillAddAfter(bool expected, int value)
+        [Fact]
+        public void WillAddAfter()
         {
-            Node myNode = new Node(value);
+            Node myNode = new Node(10);
             LList newList = new LList(myNode);
-            Node insertNode = new Node("node");
+            Node insertNode = new Node("I'm a node");
             newList.Append(insertNode);
 
             newList.AddAfter(myNode, insertNode);
-            Assert.True(newList.Includes(insertNode) == expected);
+            Assert.True(newList.Includes(insertNode));
         }
     }
 }

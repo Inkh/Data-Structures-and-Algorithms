@@ -130,7 +130,7 @@ namespace LinkedList.Classes
                 Current = Current.Next;
             }
 
-            if (Current.Value == targetNode.Value)
+            if (Current.Value.ToString() == targetNode.Value.ToString())
             {
                 Current.Next = inputNode;
                 return;
