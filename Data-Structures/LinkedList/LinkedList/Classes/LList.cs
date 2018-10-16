@@ -31,6 +31,9 @@ namespace LinkedList.Classes
             Head = node;
         }
 
+        /// <summary>
+        /// Traverses the list and prints out individual nodes
+        /// </summary>
         public void Print()
         {
             Current = Head;
@@ -42,6 +45,10 @@ namespace LinkedList.Classes
             Console.Write($"{Current.Value} ---> NULL");
         }
 
+        /// <summary>
+        /// Appends to the tail of List
+        /// </summary>
+        /// <param name="node"></param>
         public void Append(Node node)
         {
             Current = Head;
@@ -52,6 +59,11 @@ namespace LinkedList.Classes
             Current.Next = node;
         }
 
+        /// <summary>
+        /// Adds node before target node.
+        /// </summary>
+        /// <param name="targetNode"></param>
+        /// <param name="inputNode"></param>
         public void AddBefore(Node targetNode, Node inputNode)
         {
             Current = Head;
@@ -73,6 +85,11 @@ namespace LinkedList.Classes
             }
         }
 
+        /// <summary>
+        /// Check if list includes specific node 
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
         public bool Includes(Node node)
         {
             Current = Head;
@@ -85,6 +102,31 @@ namespace LinkedList.Classes
                 }
             }
             return false;
+        }
+
+        /// <summary>
+        /// Adds node after target node
+        /// </summary>
+        /// <param name="targetNode">Target node</param>
+        /// <param name="inputNode">Input node</param>
+        public void AddAfter(Node targetNode, Node inputNode)
+        {
+            Current = Head;
+            
+            while (Current.Next != null)
+            {
+                if (Current.Value == targetNode.Value)
+                {
+                    inputNode.Next = Current.Next;
+                    Current.Next = inputNode;
+                    return;
+                }
+            }
+
+            if (Current.Value == targetNode.Value)
+            {
+                Current.Next = inputNode;
+            }
         }
     }
 }
