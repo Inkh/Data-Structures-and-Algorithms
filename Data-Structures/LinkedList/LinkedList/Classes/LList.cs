@@ -35,15 +35,23 @@ namespace LinkedList.Classes
         /// <summary>
         /// Traverses the list and prints out individual nodes
         /// </summary>
-        public void Print()
+        public bool Print()
         {
+            bool hasHead = true;
+
             Current = Head;
+            if (Current == null)
+            {
+                hasHead = false;
+            }
             while (Current.Next != null)
             {
                 Console.Write($"{Current.Value} ---> ");
                 Current = Current.Next;
             }
             Console.Write($"{Current.Value} ---> NULL");
+
+            return hasHead;
         }
 
         /// <summary>
