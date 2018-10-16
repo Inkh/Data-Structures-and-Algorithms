@@ -7,32 +7,47 @@ namespace LinkedListTest
 {
     public class UnitTest1
     {
-        [Fact]
-        public void WillFindNode()
+        [Theory]
+        [InlineData(true, 12)]
+        [InlineData(true, 48)]
+        [InlineData(true, 33)]
+        public void WillFindNode(bool expected, int value)
         {
-            Node myNode = new Node(10);
+            Node myNode = new Node(value);
             LList newList = new LList(myNode);
-            Assert.True(newList.Includes(myNode));
+            newList.Append(myNode);
+
+            Assert.True(newList.Includes(myNode) == expected);
         }
 
-        [Fact]
-        public void WillAddBefore()
+        [Theory]
+        [InlineData(true, 12)]
+        [InlineData(true, 48)]
+        [InlineData(true, 33)]
+        public void WillAddBefore(bool expected, int value)
         {
-            Node myNode = new Node(10);
+            Node myNode = new Node(value);
             LList newList = new LList(myNode);
             Node insertNode = new Node("I'm a node");
+            newList.Append(insertNode);
+
             newList.AddBefore(myNode, insertNode);
-            Assert.True(newList.Includes(insertNode));
+            Assert.True(newList.Includes(insertNode) == expected);
         }
 
-        [Fact]
-        public void WillAddAfter()
+        [Theory]
+        [InlineData(true, 12)]
+        [InlineData(true, 48)]
+        [InlineData(true, 33)]
+        public void WillAddAfter(bool expected, int value)
         {
-            Node myNode = new Node(10);
+            Node myNode = new Node(value);
             LList newList = new LList(myNode);
-            Node insertNode = new Node("I'm a node");
+            Node insertNode = new Node("node");
+            newList.Append(insertNode);
+
             newList.AddAfter(myNode, insertNode);
-            Assert.True(newList.Includes(insertNode));
+            Assert.True(newList.Includes(insertNode) == expected);
         }
     }
 }
