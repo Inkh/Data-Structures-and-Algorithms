@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LinkedList.Classes;
 
 namespace LinkedList.Classes
 {
-    class LList
+    public class LList
     {
         public Node Head { get; set; }
 
@@ -67,7 +68,7 @@ namespace LinkedList.Classes
         public void AddBefore(Node targetNode, Node inputNode)
         {
             Current = Head;
-            if (Head.Value == targetNode.Value)
+            if (Head.Value.ToString() == targetNode.Value.ToString())
             {
                 AddToStart(inputNode);
                 return;
@@ -75,7 +76,7 @@ namespace LinkedList.Classes
 
             while (Current.Next != null)
             {
-                if (Current.Value == targetNode.Value)
+                if (Current.Value.ToString() == targetNode.Value.ToString())
                 {
                     inputNode.Next = targetNode;
                     Current.Next = inputNode;
@@ -96,10 +97,15 @@ namespace LinkedList.Classes
             
             while (Current.Next != null)
             {
-                if (Current.Value == node.Value)
+                if (Current.Value.ToString() == node.Value.ToString())
                 {
                     return true;
                 }
+            }
+
+            if (Current.Value.ToString() == node.Value.ToString())
+            {
+                return true;
             }
             return false;
         }
@@ -115,17 +121,19 @@ namespace LinkedList.Classes
             
             while (Current.Next != null)
             {
-                if (Current.Value == targetNode.Value)
+                if (Current.Value.ToString() == targetNode.Value.ToString())
                 {
                     inputNode.Next = Current.Next;
                     Current.Next = inputNode;
                     return;
                 }
+                Current = Current.Next;
             }
 
             if (Current.Value == targetNode.Value)
             {
                 Current.Next = inputNode;
+                return;
             }
         }
     }
