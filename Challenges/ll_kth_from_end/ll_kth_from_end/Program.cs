@@ -16,15 +16,13 @@ namespace ll_kth_from_end
             myList.Print();
 
             //Expects 40
+            Console.WriteLine("Expects 40");
             Console.WriteLine(ReturnKthFromEnd(myList, 1));
 
             //Expects 10
+            Console.WriteLine("Expects 10");
             Console.WriteLine(ReturnKthFromEnd(myList, 4));
 
-            //Expects Exception
-            Console.WriteLine(ReturnKthFromEnd(myList, 6));
-
-            ReturnKthFromEnd(myList, 1);
         }
 
         public static int ReturnKthFromEnd(LList list, int k)
