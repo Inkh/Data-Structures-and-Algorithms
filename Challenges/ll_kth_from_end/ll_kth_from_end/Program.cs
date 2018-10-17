@@ -3,7 +3,7 @@ using LinkedList.Classes;
 
 namespace ll_kth_from_end
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -27,8 +27,12 @@ namespace ll_kth_from_end
             ReturnKthFromEnd(myList, 1);
         }
 
-        static int ReturnKthFromEnd(LList list, int k)
+        public static int ReturnKthFromEnd(LList list, int k)
         {
+            if (list.Head == null)
+            {
+                throw new NullReferenceException("List must not be null");
+            }
             int counter = 0;
             Node curr = list.Head;
 
