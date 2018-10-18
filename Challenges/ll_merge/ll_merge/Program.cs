@@ -3,20 +3,21 @@ using LinkedList.Classes;
 
 namespace ll_merge
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("First list : 1 --> 3 --> 5 --> NULL");
             LList first = new LList(new Node(1));
             first.Append(new Node(3));
             first.Append(new Node(5));
 
+            Console.WriteLine("First list : 2 --> 4 --> 6 --> NULL");
             LList second = new LList(new Node(2));
             second.Append(new Node(4));
             second.Append(new Node(6));
 
-            LList merged = MergeLL(first, second);
+            LList merged = MergeLists(first, second);
 
             Console.WriteLine("First method:");
             merged.Print();
@@ -42,7 +43,7 @@ namespace ll_merge
         /// <param name="list1">First linked list</param>
         /// <param name="list2">Second linked list</param>
         /// <returns>Merged linked list</returns>
-        static LList MergeLL(LList list1, LList list2)
+        public static LList MergeLists(LList list1, LList list2)
         {
             Node curr1 = list1.Head;
             Node curr2 = list2.Head;
@@ -79,7 +80,7 @@ namespace ll_merge
         /// <param name="list1">First linked list</param>
         /// <param name="list2">Second linked list</param>
         /// <returns>Merged linked list</returns>
-        static LList MergeTwo(LList list1, LList list2)
+        public static LList MergeTwo(LList list1, LList list2)
         {
             Node curr1 = list1.Head;
             Node curr2 = list2.Head;
@@ -111,7 +112,7 @@ namespace ll_merge
         /// </summary>
         /// <param name="list">Linked List</param>
         /// <param name="node">Node to match</param>
-        static void FindAndReplaceNode(LList list, Node node)
+        public static void FindAndReplaceNode(LList list, Node node)
         {
             Node curr = list.Head;
 
