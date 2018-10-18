@@ -19,7 +19,7 @@ namespace Fibonacci
         /// <returns>Value in sequence</returns>
         public static int FibonacciSequence(int idx)
         {
-            if (idx <= 2 && idx >= 0)
+            if (idx < 2 && idx >= 0)
             {
                 return idx;
             }
