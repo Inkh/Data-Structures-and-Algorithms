@@ -25,6 +25,12 @@ namespace ll_kth_from_end
 
         }
 
+        /// <summary>
+        /// Returns Kth element from the end starting with index 0
+        /// </summary>
+        /// <param name="list">Singly Linked List</param>
+        /// <param name="k">Index from end</param>
+        /// <returns></returns>
         public static int ReturnKthFromEnd(LList list, int k)
         {
             if (list.Head == null)
