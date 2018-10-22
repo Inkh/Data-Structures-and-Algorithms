@@ -8,6 +8,10 @@ namespace StackAndQueue.Classes
     {
         public Node Top { get; set; }
 
+        public Stack(Node node)
+        {
+            Top = node;
+        }
         /// <summary>
         /// 'Peeks' at the current node in stack.
         /// </summary>
