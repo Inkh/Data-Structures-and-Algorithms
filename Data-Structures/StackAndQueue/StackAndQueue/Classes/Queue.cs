@@ -16,6 +16,15 @@ namespace StackAndQueue.Classes
         }
 
         /// <summary>
+        /// Returns the front node of the queue
+        /// </summary>
+        /// <returns>Front node</returns>
+        public Node Peek()
+        {
+            return Front;
+        }
+
+        /// <summary>
         /// Adds a node to the rear end of queue
         /// </summary>
         /// <param name="node">Node to be added</param>
