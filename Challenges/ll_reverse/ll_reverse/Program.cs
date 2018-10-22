@@ -7,7 +7,7 @@ namespace ll_reverse
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Creating new LL...");
             LList myList = new LList(new Node(10));
             myList.Append(new Node(20));
             myList.Append(new Node(30));
@@ -15,11 +15,13 @@ namespace ll_reverse
             myList.Append(new Node(50));
 
             myList.Print();
+            Console.WriteLine("\n");
 
+            Console.WriteLine("Reversing list...");
             ReverseLL(myList);
 
             myList.Print();
-            Console.WriteLine(myList.Head.Value);
+            Console.WriteLine("\n");
         }
 
         /// <summary>
