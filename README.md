@@ -8,3 +8,5 @@
 4. [Challenge: LinkedList Return kth from End](Challenges/ll_kth_from_end)
 
 5. [Challenge: LinkedList Merge](Challenges/ll_merge)
+
+6. [Challenge: Reverse LinkedList](Challenges/ll_reverse)
