@@ -3,7 +3,7 @@ using LinkedList.Classes;
 
 namespace ll_reverse
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -19,13 +19,14 @@ namespace ll_reverse
             ReverseLL(myList);
 
             myList.Print();
+            Console.WriteLine(myList.Head.Value);
         }
 
         /// <summary>
         /// Reverses a Linked List
         /// </summary>
         /// <param name="input">LinkedList input</param>
-        static void ReverseLL(LList input)
+        public static void ReverseLL(LList input)
         {
             Node curr = input.Head;
             Node prev = null;
@@ -37,7 +38,6 @@ namespace ll_reverse
                 prev = curr;
                 curr = next;
             }
-
             input.Head = prev;
         }
     }
