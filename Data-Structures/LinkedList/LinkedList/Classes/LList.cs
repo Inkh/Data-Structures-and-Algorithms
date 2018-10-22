@@ -49,7 +49,7 @@ namespace LinkedList.Classes
                 Console.Write($"{Current.Value} ---> ");
                 Current = Current.Next;
             }
-            Console.Write($"{Current.Value} ---> NULL");
+            Console.WriteLine($"{Current.Value} ---> NULL");
 
             return hasHead;
         }
