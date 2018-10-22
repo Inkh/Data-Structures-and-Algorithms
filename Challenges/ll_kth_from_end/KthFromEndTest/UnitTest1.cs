@@ -27,7 +27,10 @@ namespace KthFromEndTest
 
             Assert.Equal(expected, ReturnKthFromEnd(myList, idx));
         }
-
+        
+        /// <summary>
+        /// Tests if an error will be returned on invalid inputs
+        /// </summary>
         [Fact]
         public void WillRaiseExceptionTest()
         {
@@ -37,6 +40,9 @@ namespace KthFromEndTest
             Assert.IsType<IndexOutOfRangeException>(e);
         }
 
+        /// <summary>
+        /// Tests for exception when null list is passed in.
+        /// </summary>
         [Fact]
         public void WillReturnNullIfHeadNullTest()
         {
