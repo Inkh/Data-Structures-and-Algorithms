@@ -6,3 +6,5 @@
 3. [Challenge: Fibonacci](Challenges/Fibonacci)
 
 4. [Challenge: LinkedList Return kth from End](Challenges/ll_kth_from_end)
+
+5. [Challenge: LinkedList Merge](Challenges/ll_merge)
