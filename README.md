@@ -10,3 +10,5 @@
 5. [Challenge: LinkedList Merge](Challenges/ll_merge)
 
 6. [Challenge: Reverse LinkedList](Challenges/ll_reverse)
+
+7. [Challenge: Queue With Stacks](Challenges/QueueWithStacks)
