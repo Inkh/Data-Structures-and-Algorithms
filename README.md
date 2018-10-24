@@ -12,3 +12,5 @@
 6. [Challenge: Reverse LinkedList](Challenges/ll_reverse)
 
 7. [Challenge: Queue With Stacks](Challenges/QueueWithStacks)
+
+8. [Challenge: FIFO Animal Shelter](Challenges/FIFOAnimalShelter)
