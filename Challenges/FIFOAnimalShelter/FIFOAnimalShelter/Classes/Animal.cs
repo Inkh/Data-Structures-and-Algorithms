@@ -8,6 +8,8 @@ namespace FIFOAnimalShelter.Classes
     {
         public abstract string Habitat { get; set; }
 
+        public abstract string Name { get; set; }
+
         public abstract string MakeSound();
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using FIFOAnimalShelter.Classes;
+using LinkedList.Classes;
 
 namespace FIFOAnimalShelter
 {
@@ -7,6 +9,11 @@ namespace FIFOAnimalShelter
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+        }
+
+        static void FIFOAnimalShelter()
+        {
+            Node myNode = new Node(new Cat("Kimchi"));
         }
     }
 }

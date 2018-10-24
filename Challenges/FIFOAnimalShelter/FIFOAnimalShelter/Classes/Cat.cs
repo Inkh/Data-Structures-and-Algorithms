@@ -8,6 +8,13 @@ namespace FIFOAnimalShelter.Classes
     {
         public override string Habitat { get; set; } = "Cat trees and such";
 
+        public override string Name { get; set; }
+
+        public Cat(string name)
+        {
+            Name = name;
+        }
+
         public override string MakeSound()
         {
             return "Meow!";
