@@ -4,18 +4,19 @@ using LinkedList.Classes;
 
 namespace FIFOAnimalShelter
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            FIFOAnimalShelter();
         }
 
         static void FIFOAnimalShelter()
         {
-            Node myNode = new Node(new Cat("Kimchi"));
-            myNode.Value;
-
+            AnimalShelter myShelter = new AnimalShelter();
+            myShelter.Enqueue(new Cat("Kimchi"));
+            Console.WriteLine((myShelter.Cat.Peek().Value is Cat));
         }
     }
 }
