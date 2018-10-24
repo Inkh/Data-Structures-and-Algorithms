@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using LinkedList.Classes;
+using StackAndQueue.Classes;
 
 namespace FIFOAnimalShelter.Classes
 {
@@ -10,26 +10,43 @@ namespace FIFOAnimalShelter.Classes
         public Node Front { get; set; }
         public Node Rear { get; set; }
 
-        public AnimalShelter(Node node)
+        public Queue Cat { get; set; }
+        public Queue Dog { get; set; }
+
+
+        public AnimalShelter()
         {
-            Front = node;
-            Rear = node;
+            Cat = new Queue(null);
+            Dog = new Queue(null);
         }
 
-        public Node Peek()
+
+        public void Enqueue(Animal animal)
         {
-            return Front;
+            if (animal is Cat)
+            {
+                Cat.Enqueue(new Node(animal));
+            }
+            else
+            {
+                Dog.Enqueue(new Node(animal));
+            }
         }
 
-        public void Enqueue(Node node)
+        public Node Dequeue(string pref)
         {
-            Rear.Next = node;
-            Rear = node;
-        }
-
-        public Node Dequeue()
-        {
-
+            if (pref.ToLower() == "cat")
+            {
+                return Cat.Dequeue();
+            } 
+            else if (pref.ToLower() == "dog")
+            {
+                return Dog.Dequeue();
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

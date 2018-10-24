@@ -14,6 +14,8 @@ namespace FIFOAnimalShelter
         static void FIFOAnimalShelter()
         {
             Node myNode = new Node(new Cat("Kimchi"));
+            myNode.Value;
+
         }
     }
 }
