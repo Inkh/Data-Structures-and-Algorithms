@@ -7,7 +7,6 @@ namespace AnimalShelterTest
     public class UnitTest1
     {
 
-
         AnimalShelter myShelter = new AnimalShelter();
 
         /// <summary>
@@ -30,6 +29,27 @@ namespace AnimalShelterTest
             Assert.True(myShelter.Dog.Peek().Value is Dog);
         }
 
+        [Fact]
+        public void CatWillDequeueTest()
+        {
+            myShelter.Enqueue(new Cat("Kimchi"));
+            myShelter.Enqueue(new Dog("Pepper"));
+
+            myShelter.Dequeue("cat");
+
+            Assert.True(myShelter.Cat.Front == null);
+        }
+
+        [Fact]
+        public void DogWillDequeueTest()
+        {
+            myShelter.Enqueue(new Cat("Kimchi"));
+            myShelter.Enqueue(new Dog("Pepper"));
+
+            myShelter.Dequeue("dog");
+
+            Assert.True(myShelter.Dog.Front == null);
+        }
 
     }
 }
