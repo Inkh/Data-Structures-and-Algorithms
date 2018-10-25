@@ -14,3 +14,5 @@
 7. [Challenge: Queue With Stacks](Challenges/QueueWithStacks)
 
 8. [Challenge: FIFO Animal Shelter](Challenges/FIFOAnimalShelter)
+
+9. [Challenge: Multi Bracket Validation](Challenges/MultiBracketValidation)
