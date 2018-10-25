@@ -14,8 +14,7 @@ namespace MultiBracketValidation
             string testString4 = "[{]}";
             string testString5 = "asdkljfoiweh";
             string testString6 = "";
-            MultiBracketValidate(testString);
-            Console.WriteLine(MultiBracketValidate(testString6));
+            Console.WriteLine(MultiBracketValidate(testString));
         }
 
         /// <summary>
@@ -51,7 +50,7 @@ namespace MultiBracketValidation
                     switch (input[i])
                     {
                         case '}':
-                            if ((char)myStack.Pop().Value == '{')
+                            if ((char)myStack.Pop().Value != '{')
                             {
                                 return false;
                             }
@@ -72,7 +71,7 @@ namespace MultiBracketValidation
                 }
             }
             //If every brace has a matching pair, return true. Otherwise, return false.
-            return myStack.Size != 1 ? false : true;
+            return myStack.Top != null ? false : true;
         }
     }
 }

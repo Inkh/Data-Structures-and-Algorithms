@@ -6,9 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="MultiBracketValidation">
-      <HintPath>bin\Debug\netcoreapp2.1\MultiBracketValidation.dll</HintPath>
-    </Reference>
     <Reference Include="StackAndQueue">
       <HintPath>..\..\..\Data-Structures\StackAndQueue\StackAndQueue\bin\Debug\netcoreapp2.1\StackAndQueue.dll</HintPath>
     </Reference>
