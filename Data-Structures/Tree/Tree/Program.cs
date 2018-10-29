@@ -8,12 +8,27 @@ namespace Tree
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            BinaryTree myTree = new BinaryTree(new Node(5));
-            myTree.Root.Left = new Node(6);
-            myTree.Root.Left.Left = new Node(1);
-            myTree.Root.Right = new Node(7);
+            BinaryTree myTree = new BinaryTree(new Node("A"));
 
-            myTree.PreOrder(myTree.Root);
+            myTree.Root.Left = new Node("B");
+            myTree.Root.Left.Left = new Node("D");
+            myTree.Root.Left.Right = new Node("E");
+
+            myTree.Root.Right = new Node("C");
+            myTree.Root.Right.Left = new Node("F");
+
+            Console.WriteLine("Pre Order");
+            myTree.PreOrder();
+
+            Console.WriteLine("In Order");
+            myTree.InOrder(myTree.Root);
+
+            Console.WriteLine("Post Order");
+            myTree.PostOrder(myTree.Root);
+
+            Console.WriteLine("Size");
+            Console.WriteLine(myTree.Size(myTree.Root));
+            myTree.Size(myTree.Root);
         }
     }
 }
