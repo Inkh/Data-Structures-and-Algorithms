@@ -1,5 +1,7 @@
 # Data-Structures-and-Algorithms
 
+
+## Challenges 
 1. [Challenge: Insert and shift an array](Challenges/ArrayShift)
 2. [Challenge: Binary Search](Challenges/BinarySearch)
 
@@ -18,3 +20,11 @@
 9. [Challenge: Multi Bracket Validation](Challenges/MultiBracketValidation)
 
 10. [Challenge: Eeney Meeney Miney Moe](Challenges/EeneyMeeneyMineyMoe)
+
+## Data Structures
+
+1. [Linked List](Data-Structures/LinkedList)
+
+2. [Stacks and Queues](Data-Structures/StackAndQueue)
+
+3. [Trees](Data-Structures/Tree)

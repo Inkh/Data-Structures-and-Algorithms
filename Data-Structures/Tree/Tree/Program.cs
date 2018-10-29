@@ -32,15 +32,22 @@ namespace Tree
             Console.WriteLine("============================");
             Console.WriteLine("============================");
 
+            Console.WriteLine("Binary Search Tree");
             BinarySearchTree myBST = new BinarySearchTree(new Node(10));
             myBST.Add(new Node(1));
             myBST.Add(new Node(11));
             myBST.Add(new Node(21));
             myBST.Add(new Node(18));
+            Console.WriteLine("Adding a bunch of nodes... Root.Right should equal 11");
             Console.WriteLine(myBST.Root.Right.Value);
-            Console.WriteLine(myBST.Root.Right.Right.Value);
 
+            Console.WriteLine("Root.Left should equal 1");
+            Console.WriteLine(myBST.Root.Left.Value);
+
+            Console.WriteLine("Searching for Node with value 18. Should return the node");
             Console.WriteLine(myBST.Search(new Node(18)).Value);
+
+            Console.WriteLine("Searching for Node with value 98. Should return nothing/null");
             Console.WriteLine(myBST.Search(new Node(98)));
         }
     }
