@@ -7,7 +7,7 @@ namespace Tree
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Binary Tree");
             BinaryTree myTree = new BinaryTree(new Node("A"));
 
             myTree.Root.Left = new Node("B");
@@ -21,14 +21,26 @@ namespace Tree
             myTree.PreOrder();
 
             Console.WriteLine("In Order");
-            myTree.InOrder(myTree.Root);
+            myTree.InOrder();
 
             Console.WriteLine("Post Order");
-            myTree.PostOrder(myTree.Root);
+            myTree.PostOrder();
 
             Console.WriteLine("Size");
             Console.WriteLine(myTree.Size(myTree.Root));
-            myTree.Size(myTree.Root);
+
+            Console.WriteLine("============================");
+            Console.WriteLine("============================");
+
+            BinarySearchTree myBST = new BinarySearchTree(new Node(10));
+            myBST.Add(new Node(1));
+            myBST.Add(new Node(11));
+            myBST.Add(new Node(21));
+            myBST.Add(new Node(18));
+            Console.WriteLine(myBST.Root.Right.Value);
+            Console.WriteLine(myBST.Root.Right.Right.Value);
+
+            Console.WriteLine(myBST.Search(new Node(18)).Value);
         }
     }
 }
