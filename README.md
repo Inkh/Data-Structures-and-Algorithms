@@ -16,3 +16,5 @@
 8. [Challenge: FIFO Animal Shelter](Challenges/FIFOAnimalShelter)
 
 9. [Challenge: Multi Bracket Validation](Challenges/MultiBracketValidation)
+
+10. [Challenge: Eeney Meeney Miney Moe](Challenges/EeneyMeeneyMineyMoe)
