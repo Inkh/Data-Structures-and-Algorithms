@@ -16,7 +16,13 @@ namespace EeneyMeeneyMineyMoe
             Console.Write("Actual output: ");
             Console.WriteLine(result);
         }
-
+        /// <summary>
+        /// Goes through the array and continuously removes elements in a circular fashion
+        /// until only one element is left.
+        /// </summary>
+        /// <param name="input">Array of strings</param>
+        /// <param name="n">The nth element to be removed. The first element is 1</param>
+        /// <returns>Single string</returns>
         public static string EeneyMeeneyMineyMoeMethod(string[] input, int n)
         {
             Queue myQ = new Queue(new Node(input[0]));
