@@ -41,6 +41,7 @@ namespace Tree
             Console.WriteLine(myBST.Root.Right.Right.Value);
 
             Console.WriteLine(myBST.Search(new Node(18)).Value);
+            Console.WriteLine(myBST.Search(new Node(98)));
         }
     }
 }

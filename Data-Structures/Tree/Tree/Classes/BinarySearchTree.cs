@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Tree.Classes
 {
-    class BinarySearchTree
+    public class BinarySearchTree
     {
         public Node Root { get; set; }
 
@@ -13,6 +13,10 @@ namespace Tree.Classes
             Root = root;
         }
 
+        /// <summary>
+        /// Adds a node to Binary Search Tree.
+        /// </summary>
+        /// <param name="node">Node to be added</param>
         public void Add(Node node)
         {
             Node curr = Root;
@@ -39,6 +43,11 @@ namespace Tree.Classes
             }
         }
 
+        /// <summary>
+        /// Searches for a Node in BST.
+        /// </summary>
+        /// <param name="node">Node to be searched</param>
+        /// <returns>Target Node, or null if node doesn't exist</returns>
         public Node Search(Node node)
         {
             Node curr = Root;
