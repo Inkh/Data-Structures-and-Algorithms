@@ -8,6 +8,10 @@ namespace FizzBuzzTree
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.WriteLine("Testing for FizzBuzz method");
+            Console.WriteLine("Expected Output: Buzz, 4, Fizzbuzz, 1, Fizz, Buzz, Fizzbuzz. ");
+
+            Console.WriteLine("Actual output: ");
             BinaryTree myTree = new BinaryTree(new Node(5));
 
             myTree.Root.Left = new Node(4);
