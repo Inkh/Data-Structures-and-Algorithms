@@ -20,12 +20,22 @@ namespace FizzBuzzTree
             FizzBuzz(myTree);
         }
 
-        static void FizzBuzz(BinaryTree tree)
+        /// <summary>
+        /// Method to take in a tree and call overloaded method starting with
+        /// Root of tree.
+        /// </summary>
+        /// <param name="tree">Binary Tree</param>
+        public static void FizzBuzz(BinaryTree tree)
         {
             FizzBuzz(tree.Root);
         }
 
-        static void FizzBuzz(Node node)
+        /// <summary>
+        /// Overloaded FizzBuzz method to take in a tree node and recursively
+        /// trace through the nodes to output appropriate values.
+        /// </summary>
+        /// <param name="node">Tree Root Node</param>
+        private static void FizzBuzz(Node node)
         {
             if ((int)node.Value % 15 == 0)
             {
