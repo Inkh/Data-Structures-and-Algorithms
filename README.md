@@ -21,6 +21,8 @@
 
 10. [Challenge: Eeney Meeney Miney Moe](Challenges/EeneyMeeneyMineyMoe)
 
+11. [Challenge: Fizzbuzz Tree](Challenges/FizzBuzzTree)
+
 ## Data Structures
 
 1. [Linked List](Data-Structures/LinkedList)
