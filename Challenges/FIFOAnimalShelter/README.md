@@ -4,7 +4,7 @@
 
 Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
 
-# Approch and Efficiency
+# Approach and Efficiency
 
 Enqueue
 
