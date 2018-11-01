@@ -1,4 +1,6 @@
 ﻿using System;
+using Tree.Classes;
+using StackAndQueue.Classes;
 
 namespace BreadthFirst
 {
@@ -9,6 +11,8 @@ namespace BreadthFirst
             Console.WriteLine("Hello World!");
         }
 
-        
+        static void BreadthFirstTraversal(BinaryTree tree)
+        {
+        }
     }
 }
