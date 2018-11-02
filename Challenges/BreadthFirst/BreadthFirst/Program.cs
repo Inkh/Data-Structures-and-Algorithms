@@ -28,14 +28,14 @@ namespace BreadthFirst
             Queue<Node> myQ = new Queue<Node>();
             myQ.Enqueue(tree.Root);
 
-            while (myQ.Peek() != null)
+            while (myQ.Count != 0)
             {
                 Node temp = myQ.Dequeue();
                 if (temp.Left != null)
                 {
                     myQ.Enqueue(temp.Left);
                 }
-                else if (temp.Right != null)
+                if (temp.Right != null)
                 {
                     myQ.Enqueue(temp.Right);
                 }
