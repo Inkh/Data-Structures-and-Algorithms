@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using Tree.Classes;
-using StackAndQueue.Classes;
 
 namespace BreadthFirst
 {
@@ -13,6 +14,9 @@ namespace BreadthFirst
 
         static void BreadthFirstTraversal(BinaryTree tree)
         {
+            Queue<Node> myQ = new Queue<Node>();
+
+
         }
     }
 }
