@@ -9,7 +9,8 @@ namespace BreadthFirst
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Sample Binary tree created.");
+            Console.WriteLine("\n");
             BinaryTree myTree = new BinaryTree(new Node(1));
             myTree.Root.Left = new Node(2);
             myTree.Root.Left.Left = new Node(4);
@@ -19,10 +20,15 @@ namespace BreadthFirst
             myTree.Root.Right.Right = new Node(7);
             myTree.Root.Right.Left = new Node(6);
 
-            //myTree.PreOrder();
+            Console.WriteLine("Breadth First Traversal Order:");
+            Console.WriteLine("\n");
             BreadthFirstTraversal(myTree);
         }
 
+        /// <summary>
+        /// Breadth First Traversal of a tree.
+        /// </summary>
+        /// <param name="tree">Tree</param>
         static void BreadthFirstTraversal(BinaryTree tree)
         {
             Queue<Node> myQ = new Queue<Node>();
