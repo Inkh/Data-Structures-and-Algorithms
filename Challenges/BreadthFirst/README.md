@@ -14,16 +14,9 @@ Time Complexity: O(n)
 Space Complexity: O(w)
 > Space complexity w, depending on the width of the tree.
 
-Dequeue:
-
-Time Complexity: O(n)
-> Time Complexity is O(n) due to the first stack having to move everything to and from the second stack.
-
-Space Complexity: O(1)
-> Space complexity is constant as we're not using any additional memory.
 
 ## Solution
-![queuewithstack](../../assets/bfs.jpg)
+![bfs](../../assets/bfs.jpg)
 
 ## Test
 
