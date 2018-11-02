@@ -23,6 +23,8 @@
 
 11. [Challenge: Fizzbuzz Tree](Challenges/FizzBuzzTree)
 
+12. [Challenge: Breadth First Traversal](Challenges/BreadthFirst)
+
 ## Data Structures
 
 1. [Linked List](Data-Structures/LinkedList)
