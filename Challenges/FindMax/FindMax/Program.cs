@@ -3,7 +3,7 @@ using Tree.Classes;
 
 namespace FindMax
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -18,13 +18,25 @@ namespace FindMax
             Console.WriteLine(FindMaxValue(myTree));
         }
 
-        static int FindMaxValue(BinaryTree tree)
+        /// <summary>
+        /// FindMax method that takes in a tree. Calls overloaded method for actual logic.
+        /// </summary>
+        /// <param name="tree">Binary Tree</param>
+        /// <returns>Max value</returns>
+        public static int FindMaxValue(BinaryTree tree)
         {
             int max = (int)tree.Root.Value;
             return FindMaxValue(tree.Root, max);
         }
 
-        static int FindMaxValue(Node node, int max)
+        /// <summary>
+        /// Overloaded method that traverses through the tree recursively, then returns the max
+        /// value of the tree.
+        /// </summary>
+        /// <param name="node">Root Node</param>
+        /// <param name="max">Max value</param>
+        /// <returns>Max value</returns>
+        private static int FindMaxValue(Node node, int max)
         {
             if ((int)node.Value > max)
             {
