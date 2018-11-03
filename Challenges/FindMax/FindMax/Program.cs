@@ -25,6 +25,11 @@ namespace FindMax
         /// <returns>Max value</returns>
         public static int FindMaxValue(BinaryTree tree)
         {
+            if (tree.Root == null)
+            {
+                return -1;
+            }
+
             int max = (int)tree.Root.Value;
             return FindMaxValue(tree.Root, max);
         }

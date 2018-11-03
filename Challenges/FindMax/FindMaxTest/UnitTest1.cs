@@ -8,6 +8,10 @@ namespace FindMaxTest
     public class UnitTest1
     {
         BinaryTree myTree = new BinaryTree(new Node(1));
+
+        /// <summary>
+        /// Tests that correct value is returned
+        /// </summary>
         [Fact]
         public void WillReturnCorrectNodeTest()
         {
@@ -18,6 +22,20 @@ namespace FindMaxTest
             myTree.Root.Right.Left = new Node(32);
 
             Assert.Equal(10000, FindMaxValue(myTree));
+        }
+
+        [Fact]
+        public void WillReturnNegativeOneIfTreeIsEmptyTest()
+        {
+            BinaryTree myTree = new BinaryTree(null);
+
+            Assert.Equal(-1, FindMaxValue(myTree));
+        }
+
+        [Fact]
+        public void WillReturnCorrectValueIfSingleNodeTest()
+        {
+            Assert.Equal(1, FindMaxValue(myTree));
         }
     }
 }
