@@ -25,6 +25,8 @@
 
 12. [Challenge: Breadth First Traversal](Challenges/BreadthFirst)
 
+13. [Challenge: Find Max Value In Tree](Challenges/FindMax)
+
 ## Data Structures
 
 1. [Linked List](Data-Structures/LinkedList)
