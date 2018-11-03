@@ -10,7 +10,7 @@ namespace FindMaxTest
         BinaryTree myTree = new BinaryTree(new Node(1));
 
         /// <summary>
-        /// Tests that correct value is returned
+        /// Tests that correct value is returned during normal cases.
         /// </summary>
         [Fact]
         public void WillReturnCorrectNodeTest()
@@ -24,6 +24,9 @@ namespace FindMaxTest
             Assert.Equal(10000, FindMaxValue(myTree));
         }
 
+        /// <summary>
+        /// Tests that correct value is returned when tree is empty.
+        /// </summary>
         [Fact]
         public void WillReturnNegativeOneIfTreeIsEmptyTest()
         {
@@ -32,6 +35,9 @@ namespace FindMaxTest
             Assert.Equal(-1, FindMaxValue(myTree));
         }
 
+        /// <summary>
+        /// Tests that correct value is return when there is only one node.
+        /// </summary>
         [Fact]
         public void WillReturnCorrectValueIfSingleNodeTest()
         {
