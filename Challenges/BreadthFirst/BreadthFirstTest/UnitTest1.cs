@@ -12,7 +12,10 @@ namespace BreadthFirstTest
         [InlineData(0)]
         [InlineData(1)]
         [InlineData(2)]
-        //[InlineData(4,4)]
+        [InlineData(3)]
+        [InlineData(4)]
+        [InlineData(5)]
+        [InlineData(6)]
         public void BFSWillPrintTest(int idx)
         {
             BinaryTree myTree = new BinaryTree(new Node(1));
