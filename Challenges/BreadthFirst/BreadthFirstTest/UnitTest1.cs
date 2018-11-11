@@ -9,11 +9,11 @@ namespace BreadthFirstTest
     public class UnitTest1
     {
         [Theory]
-        [InlineData(1,1)]
-        [InlineData(2,2)]
-        [InlineData(3,3)]
-        [InlineData(4,4)]
-        public void BFSWillPrintTest(int expected, int count)
+        [InlineData(0)]
+        [InlineData(1)]
+        [InlineData(2)]
+        //[InlineData(4,4)]
+        public void BFSWillPrintTest(int idx)
         {
             BinaryTree myTree = new BinaryTree(new Node(1));
             myTree.Root.Left = new Node(2);
@@ -22,19 +22,10 @@ namespace BreadthFirstTest
 
             myTree.Root.Right = new Node(3);
             myTree.Root.Right.Right = new Node(7);
-            myTree.Root.Left = new Node(6);
+            myTree.Root.Right.Left = new Node(6);
+            int[] myArr = BreadthFirstTraversal(myTree);
 
-            int counter = 1;
-            foreach (var item in BreadthFirstTraversal(myTree))
-            {
-                expected = item;
-                if (count == counter)
-                {
-                    break;
-                }
-                counter++;
-            }
-            Assert.Equal(expected, count);
+            Assert.Equal(idx + 1, myArr[idx]);
         }
     }
 }

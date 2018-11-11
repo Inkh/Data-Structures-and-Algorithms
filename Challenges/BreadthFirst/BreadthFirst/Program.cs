@@ -22,9 +22,15 @@ namespace BreadthFirst
 
             Console.WriteLine("Breadth First Traversal Order:");
             Console.WriteLine("\n");
-            foreach (var item in BreadthFirstTraversal(myTree))
+
+            int[] stuff = BreadthFirstTraversal(myTree);
+            //foreach (var item in BreadthFirstTraversal(myTree))
+            //{
+            //    Console.WriteLine(item);
+            //}
+            for (int i = 0; i < stuff.Length; i++)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(BreadthFirstTraversal(myTree)[i]);
             }
         }
 
@@ -32,11 +38,15 @@ namespace BreadthFirst
         /// Breadth First Traversal of a tree.
         /// </summary>
         /// <param name="tree">Tree</param>
-        public static List<int> BreadthFirstTraversal(BinaryTree tree)
+        public static int[] BreadthFirstTraversal(BinaryTree tree)
         {
             List<int> retList = new List<int>();
             Queue<Node> myQ = new Queue<Node>();
+
+            int[] retArr = new int[tree.Size(tree.Root)];
+            
             myQ.Enqueue(tree.Root);
+            int i = 0;
             while (myQ.Count != 0)
             {
                 Node temp = myQ.Dequeue();
@@ -48,9 +58,10 @@ namespace BreadthFirst
                 {
                     myQ.Enqueue(temp.Right);
                 }
-                retList.Add((int)temp.Value);
+                retArr[i] = (int)temp.Value;
+                i++;
             }
-            return retList;
+            return retArr;
         }
     }
 }
