@@ -5,7 +5,7 @@ using Tree.Classes;
 
 namespace BreadthFirst
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -23,17 +23,18 @@ namespace BreadthFirst
             Console.WriteLine("Breadth First Traversal Order:");
             Console.WriteLine("\n");
             BreadthFirstTraversal(myTree);
+            Console.WriteLine(BreadthFirstTraversal(myTree));
         }
 
         /// <summary>
         /// Breadth First Traversal of a tree.
         /// </summary>
         /// <param name="tree">Tree</param>
-        static void BreadthFirstTraversal(BinaryTree tree)
+        public static List<int> BreadthFirstTraversal(BinaryTree tree)
         {
+            List<int> retList = new List<int>();
             Queue<Node> myQ = new Queue<Node>();
             myQ.Enqueue(tree.Root);
-
             while (myQ.Count != 0)
             {
                 Node temp = myQ.Dequeue();
@@ -46,8 +47,10 @@ namespace BreadthFirst
                     myQ.Enqueue(temp.Right);
                 }
 
+                retList.Add((int)temp.Value);
                 Console.WriteLine(temp.Value);
             }
+            return retList;
         }
     }
 }
