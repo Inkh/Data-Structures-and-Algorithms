@@ -8,10 +8,14 @@ namespace BreadthFirstTest
 {
     public class UnitTest1
     {
-        BinaryTree myTree = new BinaryTree(new Node(1));
-        [Fact]
-        public void BFSWillPrintTest()
+        [Theory]
+        [InlineData(1,1)]
+        [InlineData(2,2)]
+        [InlineData(3,3)]
+        [InlineData(4,4)]
+        public void BFSWillPrintTest(int expected, int count)
         {
+            BinaryTree myTree = new BinaryTree(new Node(1));
             myTree.Root.Left = new Node(2);
             myTree.Root.Left.Left = new Node(4);
             myTree.Root.Left.Right = new Node(5);
@@ -20,7 +24,17 @@ namespace BreadthFirstTest
             myTree.Root.Right.Right = new Node(7);
             myTree.Root.Left = new Node(6);
 
-            Assert.Equal(new List<int> {1,2,3,4,5,6,7}, BreadthFirstTraversal(myTree));
+            int counter = 1;
+            foreach (var item in BreadthFirstTraversal(myTree))
+            {
+                expected = item;
+                if (count == counter)
+                {
+                    break;
+                }
+                counter++;
+            }
+            Assert.Equal(expected, count);
         }
     }
 }

@@ -22,8 +22,10 @@ namespace BreadthFirst
 
             Console.WriteLine("Breadth First Traversal Order:");
             Console.WriteLine("\n");
-            BreadthFirstTraversal(myTree);
-            Console.WriteLine(BreadthFirstTraversal(myTree));
+            foreach (var item in BreadthFirstTraversal(myTree))
+            {
+                Console.WriteLine(item);
+            }
         }
 
         /// <summary>
@@ -46,9 +48,7 @@ namespace BreadthFirst
                 {
                     myQ.Enqueue(temp.Right);
                 }
-
                 retList.Add((int)temp.Value);
-                Console.WriteLine(temp.Value);
             }
             return retList;
         }
