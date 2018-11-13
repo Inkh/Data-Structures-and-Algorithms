@@ -1,4 +1,5 @@
 ﻿using System;
+using Hashtables.Classes;
 
 namespace Hashtables
 {
@@ -7,7 +8,14 @@ namespace Hashtables
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Console.WriteLine((int)'1');
+
+            Hashtable myTable = new Hashtable();
+            myTable.Add("seal", "lion");
+            myTable.Add("eals", "wop");
+            Console.WriteLine(myTable.List[275].Head.Key);
+            Console.WriteLine(myTable.List[275].Head.Value);
+            Console.WriteLine(myTable.List[275].Head.Next.Key);
+            Console.WriteLine(myTable.List[275].Head.Next.Value);
         }
     }
 }
