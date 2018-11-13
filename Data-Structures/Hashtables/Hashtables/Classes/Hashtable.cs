@@ -1,16 +1,30 @@
 ﻿using System;
 using System.Text;
-using LinkedList.Classes;
-
 namespace Hashtables.Classes
 {
     class Hashtable
     {
-        public LList[] List { get; set; }
+        public LinkedList[] List { get; set; }
 
         public Hashtable()
         {
-            List = new LList[1024];
+            List = new LinkedList[1024];
+        }
+
+        public void Add(object key, object value)
+        {
+            int sumIdx = (int)key.ToString()[0];
+            for (int i = 1; i < key.ToString().Length; i++)
+            {
+                sumIdx += key.ToString()[i];
+            }
+
+            sumIdx = (sumIdx * 599) % 1024;
+
+            if (List[sumIdx] == null)
+            {
+                List[sumIdx] = new LinkedList(new Node(key, value));
+            }
         }
     }
 }

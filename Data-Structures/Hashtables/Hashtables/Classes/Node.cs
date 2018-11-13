@@ -21,6 +21,7 @@ namespace Hashtables.Classes
         /// </summary>
         public Node Next { get; set; }
 
+        //Constructor
         public Node(object key, object value)
         {
             Key = key;
