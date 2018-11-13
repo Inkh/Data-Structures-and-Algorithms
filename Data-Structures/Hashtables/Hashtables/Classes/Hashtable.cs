@@ -36,7 +36,7 @@ namespace Hashtables.Classes
         public void Add(object key, object value)
         {
             int idx = GetHash(key.ToString());
-
+            Console.WriteLine(idx);
             if (List[idx] == null)
             {
                 List[idx] = new LinkedList(new Node(key, value));
@@ -50,6 +50,56 @@ namespace Hashtables.Classes
                 }
                 curr.Next = new Node(key, value);
             }
+        }
+
+        /// <summary>
+        /// Takes in a key and checks whether the key exists in Hashtable.
+        /// </summary>
+        /// <param name="key">Key</param>
+        /// <returns>True or False</returns>
+        public bool Contains(string key)
+        {
+            int idx = GetHash(key);
+            if (List[idx] == null)
+            {
+                return false;
+            }
+
+            Node curr = List[idx].Head;
+            while (curr != null)
+            {
+                if ((string)curr.Key == key)
+                {
+                    return true;
+                }
+                curr = curr.Next;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Takes in a key and returns the value associated with the key.
+        /// Returns error message instead if no such key exists.
+        /// </summary>
+        /// <param name="key">Key</param>
+        /// <returns>Value associated with Key, or Error message</returns>
+        public string Find(string key)
+        {
+            int idx = GetHash(key);
+            if (List[idx] == null)
+            {
+                return "Key does not exist";
+            }
+            Node curr = List[idx].Head;
+            while (curr != null)
+            {
+                if ((string)curr.Key == key)
+                {
+                    return (string)curr.Value;
+                }
+                curr = curr.Next;
+            }
+            return "Key does not exist";
         }
     }
 }
