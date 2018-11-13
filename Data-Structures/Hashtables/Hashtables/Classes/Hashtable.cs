@@ -29,7 +29,8 @@ namespace Hashtables.Classes
         }
 
         /// <summary>
-        /// Takes in key value pair and adds to hash table
+        /// Takes in key value pair and adds to hash table.
+        /// If key already exists, update the value.
         /// </summary>
         /// <param name="key">Key</param>
         /// <param name="value">Value</param>
@@ -46,6 +47,11 @@ namespace Hashtables.Classes
                 Node curr = List[idx].Head;
                 while (curr.Next != null)
                 {
+                    if (curr.Key == key)
+                    {
+                        curr.Value = value;
+                        return;
+                    }
                     curr = curr.Next;
                 }
                 curr.Next = new Node(key, value);

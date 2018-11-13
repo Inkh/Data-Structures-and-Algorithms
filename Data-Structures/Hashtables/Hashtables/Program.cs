@@ -20,6 +20,9 @@ namespace Hashtables
             Console.WriteLine(myTable.Contains("kimchi"));
             Console.WriteLine(myTable.Contains("seal"));
             Console.WriteLine(myTable.Find("seal"));
+
+            myTable.Add("seal", "doggo");
+            Console.WriteLine(myTable.Find("seal"));
         }
     }
 }
