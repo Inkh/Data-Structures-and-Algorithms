@@ -34,3 +34,5 @@
 2. [Stacks and Queues](Data-Structures/StackAndQueue)
 
 3. [Trees](Data-Structures/Tree)
+
+4. [Hashtables](Data-Structures/Hashtables)
