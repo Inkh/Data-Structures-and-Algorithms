@@ -37,7 +37,6 @@ namespace Hashtables.Classes
         public void Add(object key, object value)
         {
             int idx = GetHash(key.ToString());
-            Console.WriteLine(idx);
             if (List[idx] == null)
             {
                 List[idx] = new LinkedList(new Node(key, value));

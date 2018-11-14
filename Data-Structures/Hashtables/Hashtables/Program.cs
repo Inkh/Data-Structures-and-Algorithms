@@ -7,22 +7,30 @@ namespace Hashtables
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
+            Console.WriteLine("Hashtable created");
             Hashtable myTable = new Hashtable();
+            Console.WriteLine("Adding key value pairs...");
+
+            Console.WriteLine("Adding 'seal' and 'lion'");
             myTable.Add("seal", "lion");
+
+            Console.WriteLine("Adding 'eals' and 'wop'. Expecting collision");
             myTable.Add("eals", "wop");
-            Console.WriteLine(myTable.List[246].Head.Key);
-            Console.WriteLine(myTable.List[246].Head.Value);
-            Console.WriteLine(myTable.List[246].Head.Next.Key);
-            Console.WriteLine(myTable.List[246].Head.Next.Value);
-            Console.WriteLine(myTable.Contains("eals"));
-            Console.WriteLine(myTable.Contains("kimchi"));
-            Console.WriteLine(myTable.Contains("seal"));
+
+            Console.WriteLine("Calling .Find on 'seal'. Expecting 'lion':");
             Console.WriteLine(myTable.Find("seal"));
 
-            myTable.Add("seal", "doggo");
-            Console.WriteLine(myTable.Find("seal"));
+            Console.WriteLine("Calling .Find on 'eals'. Expecting 'wop':");
+            Console.WriteLine(myTable.Find("eals"));
+
+            Console.WriteLine("Calling .Contains on 'seal'. Expecting 'true':");
+            Console.WriteLine(myTable.Contains("seal"));
+
+            Console.WriteLine("Calling .Contains on 'eals'. Expecting 'true':");
+            Console.WriteLine(myTable.Contains("eals"));
+
+            Console.WriteLine("Calling .Contains on 'kimchi'. Expecting 'false':");
+            Console.WriteLine(myTable.Contains("kimchi"));
         }
     }
 }
