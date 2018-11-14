@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hashtables.Classes
 {
-    class LinkedList
+    public class LinkedList
     {
         public Node Head { get; set; }
 

@@ -2,7 +2,7 @@
 using System.Text;
 namespace Hashtables.Classes
 {
-    class Hashtable
+    public class Hashtable
     {
         public LinkedList[] List { get; set; }
 
