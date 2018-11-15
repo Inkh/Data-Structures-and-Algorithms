@@ -3,7 +3,7 @@ using Hashtables.Classes;
 
 namespace RepeatedWord
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -13,6 +13,11 @@ namespace RepeatedWord
             Console.WriteLine(FindRepeatedWord(myStr));
         }
 
+        /// <summary>
+        /// Finds the first repeated word in a string
+        /// </summary>
+        /// <param name="str">Input string</param>
+        /// <returns>First repeated word</returns>
         public static string FindRepeatedWord(string str)
         {
             Hashtable myTable = new Hashtable();
