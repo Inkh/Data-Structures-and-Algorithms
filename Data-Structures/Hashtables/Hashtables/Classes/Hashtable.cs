@@ -62,9 +62,9 @@ namespace Hashtables.Classes
         /// </summary>
         /// <param name="key">Key</param>
         /// <returns>True or False</returns>
-        public bool Contains(string key)
+        public bool Contains(object key)
         {
-            int idx = GetHash(key);
+            int idx = GetHash(key.ToString());
             if (List[idx] == null)
             {
                 return false;
@@ -73,7 +73,7 @@ namespace Hashtables.Classes
             Node curr = List[idx].Head;
             while (curr != null)
             {
-                if ((string)curr.Key == key)
+                if (curr.Key.ToString() == key.ToString())
                 {
                     return true;
                 }
@@ -88,9 +88,9 @@ namespace Hashtables.Classes
         /// </summary>
         /// <param name="key">Key</param>
         /// <returns>Value associated with Key, or Error message</returns>
-        public string Find(string key)
+        public string Find(object key)
         {
-            int idx = GetHash(key);
+            int idx = GetHash(key.ToString());
             if (List[idx] == null)
             {
                 return "Key does not exist";
