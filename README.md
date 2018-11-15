@@ -27,6 +27,10 @@
 
 13. [Challenge: Find Max Value In Tree](Challenges/FindMax)
 
+14. [Challenge: Tree Intersection](Challenges/TreeIntersection)
+
+15. [Challenge: Repeated Word](Challenges/RepeatedWord)
+
 ## Data Structures
 
 1. [Linked List](Data-Structures/LinkedList)
