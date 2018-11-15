@@ -9,6 +9,9 @@ namespace TreeIntersectionTest
 {
     public class UnitTest1
     {
+        /// <summary>
+        /// Tests that Intersection method will return the proper list.
+        /// </summary>
         [Fact]
         public void IntersectionWillReturnCorrectListTest()
         {
@@ -33,6 +36,9 @@ namespace TreeIntersectionTest
             Assert.Equal(new List<int> { 2, 20, 1, 4, 3 }, Intersection(treeOne, treeTwo));
         }
 
+        /// <summary>
+        /// Tests that method returns empty list when empty trees are passed in.
+        /// </summary>
         [Fact]
         public void EmptyTreeTest()
         {
@@ -42,6 +48,9 @@ namespace TreeIntersectionTest
             Assert.Equal(new List<int>(), Intersection(treeOne, treeTwo));
         }
 
+        /// <summary>
+        /// Tests that method will return empty list with one empty tree.
+        /// </summary>
         [Fact]
         public void OneTreeEmptyTest()
         {

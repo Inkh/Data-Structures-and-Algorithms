@@ -30,6 +30,12 @@ namespace TreeIntersection
             Console.WriteLine(Intersection(treeOne, treeTwo));
         }
 
+        /// <summary>
+        /// Catches intersection nodes on two trees and returns the values in a list.
+        /// </summary>
+        /// <param name="treeOne">BinaryTree</param>
+        /// <param name="treeTwo">BinaryTree</param>
+        /// <returns>List of values</returns>
         public static List<int> Intersection(BinaryTree treeOne, BinaryTree treeTwo)
         {
             Hashtable myTable = new Hashtable();
