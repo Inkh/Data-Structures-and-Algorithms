@@ -5,7 +5,7 @@ Find common values in 2 binary trees.
 
 ## Approach and Efficiency
 
-Time Complexity: O(hn
+Time Complexity: O(n)
 > Time complexity is O(n) dependent on the amount of nodes.
 
 Space Complexity: O(n)
