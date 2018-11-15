@@ -5,7 +5,7 @@ using Hashtables.Classes;
 
 namespace TreeIntersection
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -22,7 +22,7 @@ namespace TreeIntersection
             BinaryTree treeTwo = new BinaryTree(new Tree.Classes.Node(2));
             treeTwo.Root.Left = new Tree.Classes.Node(20);
             treeTwo.Root.Left.Left = new Tree.Classes.Node(1);
-            treeTwo.Root.Left.Left = new Tree.Classes.Node(100);
+            treeTwo.Root.Left.Right = new Tree.Classes.Node(100);
 
             treeTwo.Root.Right = new Tree.Classes.Node(4);
             treeTwo.Root.Right.Left = new Tree.Classes.Node(3);
@@ -39,7 +39,7 @@ namespace TreeIntersection
 
             foreach (var item in listOne)
             {
-                myTable.Add(item.Value, "temp");
+                myTable.Add(item.Value.ToString(), "temp");
             }
 
             foreach (var item in listTwo)
