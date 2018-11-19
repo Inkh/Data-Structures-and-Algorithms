@@ -8,7 +8,7 @@ namespace MostCommonWord
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            string tempStr = "In a galaxy far far away";
+            string tempStr = "In a galaxy far far far far away and away";
             Console.WriteLine(MostCommon(tempStr));
         }
 
@@ -17,7 +17,7 @@ namespace MostCommonWord
             string[] wordList = inputStr.Split(" ");
             string max = wordList[0];
             Hashtable table = new Hashtable();
-            int maxCount = 0;
+            int maxCount = 1;
 
             for(int i = 0; i < wordList.Length; i++)
             {
