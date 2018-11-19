@@ -3,12 +3,13 @@ using Hashtables.Classes;
 
 namespace MostCommonWord
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             string tempStr = "in a galaxy far far far far away and away away";
-            Console.WriteLine(MostCommon(tempStr));
+            string another = "in a galaxy far away away";
+            Console.WriteLine(MostCommon(another));
         }
 
         public static string MostCommon(string inputStr)
@@ -27,7 +28,7 @@ namespace MostCommonWord
 
                     if (temp > maxCount)
                     {
-                        maxCount = Convert.ToInt32(table.Find(wordList[i]));
+                        maxCount = temp;
                         max = wordList[i];
                     }
                 }
@@ -36,7 +37,6 @@ namespace MostCommonWord
                     table.Add(wordList[i], 1);
                 }
             }
-            Console.WriteLine(table.Find("in"));
             return max;       
         }
     }
