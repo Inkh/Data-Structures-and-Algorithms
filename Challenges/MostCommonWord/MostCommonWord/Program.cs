@@ -7,13 +7,16 @@ namespace MostCommonWord
     {
         static void Main(string[] args)
         {
-            string tempStr = "in a galaxy far far far far away and away away";
             string another = "in a galaxy far away away";
             Console.WriteLine(MostCommon(another));
         }
 
         public static string MostCommon(string inputStr)
         {
+            if (inputStr == "" || inputStr == " ")
+            {
+                return "";
+            }
             string[] wordList = inputStr.Split(" ");
             string max = wordList[0];
             Hashtable table = new Hashtable();
