@@ -46,9 +46,9 @@ namespace Hashtables.Classes
                 Node curr = List[idx].Head;
                 while (curr.Next != null)
                 {
-                    if (curr.Key == key)
+                    if (curr.Key.ToString() == key.ToString())
                     {
-                        curr.Value = value;
+                        curr.Value = value.ToString();
                         return;
                     }
                     curr = curr.Next;

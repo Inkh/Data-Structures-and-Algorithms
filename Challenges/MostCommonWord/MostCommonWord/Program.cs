@@ -7,8 +7,7 @@ namespace MostCommonWord
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            string tempStr = "In a galaxy far far far far away and away";
+            string tempStr = "in a galaxy far far far far away and away away";
             Console.WriteLine(MostCommon(tempStr));
         }
 
@@ -26,7 +25,7 @@ namespace MostCommonWord
                     int temp = Convert.ToInt32(table.Find(wordList[i])) + 1;
                     table.Add(wordList[i], temp);
 
-                    if (Convert.ToInt32(table.Find(wordList[i])) > maxCount)
+                    if (temp > maxCount)
                     {
                         maxCount = Convert.ToInt32(table.Find(wordList[i]));
                         max = wordList[i];
@@ -37,6 +36,7 @@ namespace MostCommonWord
                     table.Add(wordList[i], 1);
                 }
             }
+            Console.WriteLine(table.Find("in"));
             return max;       
         }
     }
