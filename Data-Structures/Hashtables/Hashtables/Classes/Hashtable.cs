@@ -46,9 +46,9 @@ namespace Hashtables.Classes
                 Node curr = List[idx].Head;
                 while (curr.Next != null)
                 {
-                    if (curr.Key == key)
+                    if (curr.Key.ToString() == key.ToString())
                     {
-                        curr.Value = value;
+                        curr.Value = value.ToString();
                         return;
                     }
                     curr = curr.Next;
@@ -93,14 +93,15 @@ namespace Hashtables.Classes
             int idx = GetHash(key.ToString());
             if (List[idx] == null)
             {
+                Console.WriteLine("stuff");
                 return "Key does not exist";
             }
             Node curr = List[idx].Head;
             while (curr != null)
             {
-                if ((string)curr.Key == key)
+                if (curr.Key.ToString() == key.ToString())
                 {
-                    return (string)curr.Value;
+                    return curr.Value.ToString();
                 }
                 curr = curr.Next;
             }

@@ -31,6 +31,8 @@
 
 15. [Challenge: Repeated Word](Challenges/RepeatedWord)
 
+16. [Challenge: Most Common Word](Challenges/MostCommonWord)
+
 ## Data Structures
 
 1. [Linked List](Data-Structures/LinkedList)
