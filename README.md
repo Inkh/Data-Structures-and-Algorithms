@@ -33,6 +33,8 @@
 
 16. [Challenge: Most Common Word](Challenges/MostCommonWord)
 
+17. [Challenge: Insertion Sort](Challenges/InsertionSort)
+
 ## Data Structures
 
 1. [Linked List](Data-Structures/LinkedList)
