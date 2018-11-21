@@ -16,6 +16,10 @@ namespace InsertionSort
             }
         }
 
+        /// <summary>
+        /// Method that sorts an array of integers.
+        /// </summary>
+        /// <param name="arr">Array of integers.</param>
         public static void InsertionSort(int[] arr)
         {
             for (int i = 1; i < arr.Length; i++)
