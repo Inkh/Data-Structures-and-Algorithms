@@ -2,13 +2,13 @@
 
 namespace InsertionSort
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
             int[] myArr = { 10, 3, -5, 1, 2, 8, 4 };
-            InsertionSort(myArr);
+            InsertionSortMethod(myArr);
 
             foreach (var item in myArr)
             {
@@ -20,7 +20,7 @@ namespace InsertionSort
         /// Method that sorts an array of integers.
         /// </summary>
         /// <param name="arr">Array of integers.</param>
-        public static void InsertionSort(int[] arr)
+        public static void InsertionSortMethod(int[] arr)
         {
             for (int i = 1; i < arr.Length; i++)
             {
