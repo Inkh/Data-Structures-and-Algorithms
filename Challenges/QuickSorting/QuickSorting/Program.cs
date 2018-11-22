@@ -7,8 +7,23 @@ namespace QuickSorting
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            int[] myArr = { 10, 3, -5, 1, 2, 8, 4 };
+            QuickSort(myArr,0,myArr.Length - 1);
+
+            foreach (var item in myArr)
+            {
+                Console.WriteLine(item);
+            }
+
         }
 
+        /// <summary>
+        /// Sorts an array of integers in the quicksort fashion.
+        /// Calls itself recursively and uses partition helper functions to set pivot points, then calls the swap helper to perform the 'rotation'.
+        /// </summary>
+        /// <param name="arr">Arry</param>
+        /// <param name="left">Left partition</param>
+        /// <param name="right">Right partition</param>
         static void QuickSort(int[] arr, int left, int right)
         {
             if (left < right)
