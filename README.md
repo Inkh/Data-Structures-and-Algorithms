@@ -35,6 +35,8 @@
 
 17. [Challenge: Insertion Sort](Challenges/InsertionSort)
 
+18. [Challenge: Quick Sort](Challenges/QuickSorting)
+
 ## Data Structures
 
 1. [Linked List](Data-Structures/LinkedList)
