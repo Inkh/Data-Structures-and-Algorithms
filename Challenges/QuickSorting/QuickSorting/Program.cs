@@ -2,14 +2,29 @@
 
 namespace QuickSorting
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            int[] myArr = { 10, 3, -5, 1, 2, 8, 4 };
+            QuickSort(myArr,0,myArr.Length - 1);
+
+            foreach (var item in myArr)
+            {
+                Console.WriteLine(item);
+            }
+
         }
 
-        static void QuickSort(int[] arr, int left, int right)
+        /// <summary>
+        /// Sorts an array of integers in the quicksort fashion.
+        /// Calls itself recursively and uses partition helper functions to set pivot points, then calls the swap helper to perform the 'rotation'.
+        /// </summary>
+        /// <param name="arr">Arry</param>
+        /// <param name="left">Left partition</param>
+        /// <param name="right">Right partition</param>
+        public static void QuickSort(int[] arr, int left, int right)
         {
             if (left < right)
             {
@@ -21,6 +36,13 @@ namespace QuickSorting
             }
         }
 
+        /// <summary>
+        /// Sets pivot points
+        /// </summary>
+        /// <param name="arr">Array from quicksort</param>
+        /// <param name="left">Lef</param>
+        /// <param name="right">Right</param>
+        /// <returns></returns>
         static int Partition(int[] arr, int left, int right)
         {
             // set pivot
@@ -41,6 +63,12 @@ namespace QuickSorting
             return low + 1;
         }
 
+        /// <summary>
+        /// 'Rotates' array elements around pivot point.
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <param name="i"></param>
+        /// <param name="low"></param>
         static void Swap(int[] arr, int i , int low)
         {
             int temp;

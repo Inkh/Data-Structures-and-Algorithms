@@ -4,7 +4,7 @@ An array sorting method.
 
 ## Challenge
 
-Write a function called InsertionSort that sorts a given unsorted away in insertion fashion.
+Write a function called InsertionSort that sorts a given unsorted array in insertion fashion.
 
 ## Approach and Efficiency
 
