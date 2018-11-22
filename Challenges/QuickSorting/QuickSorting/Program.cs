@@ -36,6 +36,13 @@ namespace QuickSorting
             }
         }
 
+        /// <summary>
+        /// Sets pivot points
+        /// </summary>
+        /// <param name="arr">Array from quicksort</param>
+        /// <param name="left">Lef</param>
+        /// <param name="right">Right</param>
+        /// <returns></returns>
         static int Partition(int[] arr, int left, int right)
         {
             // set pivot
@@ -56,6 +63,12 @@ namespace QuickSorting
             return low + 1;
         }
 
+        /// <summary>
+        /// 'Rotates' array elements around pivot point.
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <param name="i"></param>
+        /// <param name="low"></param>
         static void Swap(int[] arr, int i , int low)
         {
             int temp;
