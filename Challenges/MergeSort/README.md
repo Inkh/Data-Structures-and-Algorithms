@@ -4,7 +4,7 @@ An array sorting method.
 
 ## Challenge
 
-Write a function called MergeSort that sorts a given unsorted away in insertion fashion.
+Write a function called MergeSort that sorts a given unsorted away in merge fashion.
 
 ## Approach and Efficiency
 
