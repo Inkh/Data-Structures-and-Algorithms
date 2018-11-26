@@ -2,18 +2,23 @@
 
 namespace MergeSort
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Unsorted Array: ");
+            int[] myArr = { 10, 3, -5, 1, 2, 8, 4 };
+            Console.WriteLine(string.Join(",", myArr));
+            Console.WriteLine("Sorting... Outputting sorted array: ");
+            MergeSortMethod(myArr);
+            Console.WriteLine(string.Join(",", myArr));
         }
 
         /// <summary>
         /// Sorting algorithm that breaks array down into halves and eventually merges everything back together.
         /// </summary>
         /// <param name="arr">Array to be sorted</param>
-        static void MergeSort(int[] arr)
+        public static void MergeSortMethod(int[] arr)
         {
             if (arr.Length > 1)
             {
@@ -28,8 +33,8 @@ namespace MergeSort
                 int[] right = new int[rightSize];
                 Array.Copy(arr, arr.Length / 2, right, 0, arr.Length - left.Length);
 
-                MergeSort(left);
-                MergeSort(right);
+                MergeSortMethod(left);
+                MergeSortMethod(right);
                 Merge(left, right, arr);
             }
         }
