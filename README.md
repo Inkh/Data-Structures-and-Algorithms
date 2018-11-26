@@ -35,7 +35,7 @@
 
 17. [Challenge: Insertion Sort](Challenges/InsertionSort)
 
-18. [Challenge: Merge Sort](Challenges/MergeSort)
+18. [Challenge: Quick Sort](Challenges/QuickSorting)
 
 ## Data Structures
 
