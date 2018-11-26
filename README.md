@@ -37,6 +37,8 @@
 
 18. [Challenge: Quick Sort](Challenges/QuickSorting)
 
+19. [Challenge: Merge Sort](Challenges/MergeSort)
+
 ## Data Structures
 
 1. [Linked List](Data-Structures/LinkedList)
