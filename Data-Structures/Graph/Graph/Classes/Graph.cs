@@ -17,12 +17,24 @@ namespace Graph.Classes
         }
 
         /// <summary>
-        /// Adds a vertex to the graph
+        /// Adds a vertex to the graph with no connections
         /// </summary>
         /// <param name="vertex">Vertex/Node</param>
-        public void AddEdge(Vertex vertex)
+        public void AddVertex(Vertex vertex)
         {
             AdjacencyList.Add(vertex, new List<Vertex>());
+        }
+
+        /// <summary>
+        /// Adds edge to two vertices
+        /// </summary>
+        /// <param name="vertexOne">First vertex</param>
+        /// <param name="vertexTwo">Second vertex</param>
+        /// <param name="weight">Weight of the edge</param>
+        public void AddEdge(Vertex vertexOne, Vertex vertexTwo, int weight)
+        {
+            WeightList.Add(new Tuple<Vertex, Vertex>(vertexOne, vertexTwo), weight);
+            AdjacencyList[vertexOne].Add(vertexTwo);
         }
 
         /// <summary>
