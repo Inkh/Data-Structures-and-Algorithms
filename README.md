@@ -48,3 +48,5 @@
 3. [Trees](Data-Structures/Tree)
 
 4. [Hashtables](Data-Structures/Hashtables)
+
+5. [Graphs](Data-Structures/Graph)
