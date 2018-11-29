@@ -39,6 +39,8 @@
 
 19. [Challenge: Merge Sort](Challenges/MergeSort)
 
+20. [Challenge: Get Edge](Challenges/GetEdge)
+
 ## Data Structures
 
 1. [Linked List](Data-Structures/LinkedList)

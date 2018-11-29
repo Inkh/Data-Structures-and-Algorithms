@@ -9,6 +9,36 @@ namespace GetEdge
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Vertex newYork = new Vertex("New York");
+            Vertex taipei = new Vertex("Taipei");
+            Vertex shanghai = new Vertex("Shanghai");
+            Vertex westLafayette = new Vertex("West Lafayette");
+            Vertex sanJose = new Vertex("San Jose");
+            Vertex seattle = new Vertex("Seattle");
+
+            Graph cityGraph = new Graph();
+            Vertex[] cities = { newYork, taipei, shanghai, westLafayette, sanJose, seattle };
+
+            cityGraph.AddVertex(newYork);
+            cityGraph.AddVertex(taipei);
+            cityGraph.AddVertex(shanghai);
+            cityGraph.AddVertex(westLafayette);
+            cityGraph.AddVertex(sanJose);
+            cityGraph.AddVertex(seattle);
+
+            cityGraph.AddUndirectedEdge(newYork, taipei, 1680);
+            cityGraph.AddUndirectedEdge(taipei, shanghai, 250);
+            cityGraph.AddUndirectedEdge(shanghai, westLafayette, 2200);
+            cityGraph.AddUndirectedEdge(westLafayette, sanJose, 560);
+            cityGraph.AddUndirectedEdge(sanJose, seattle, 180);
+            cityGraph.AddUndirectedEdge(taipei, westLafayette, 1900);
+
+            List<object> ans = GetEdge(cityGraph, new Vertex[] { taipei, shanghai, sanJose });
+
+            foreach (var item in ans)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         /// <summary>
