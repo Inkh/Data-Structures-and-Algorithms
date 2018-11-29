@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Graph.Classes
+namespace Graphs.Classes
 {
     //Node
     public class Vertex

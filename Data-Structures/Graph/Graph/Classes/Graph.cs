@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Graph.Classes
+namespace Graphs.Classes
 {
-    class Graph
+    public class Graph
     {
         public Dictionary<Vertex, List<Vertex>> AdjacencyList { get; set; }
-        public Dictionary<Tuple<Vertex, Vertex>, int> WeightList { get; set; }
+        public Dictionary<(Vertex, Vertex), int> WeightList { get; set; }
 
         //Constructor
         public Graph()
         {
             AdjacencyList = new Dictionary<Vertex, List<Vertex>>();
-            WeightList = new Dictionary<Tuple<Vertex, Vertex>, int>();
+            WeightList = new Dictionary<(Vertex, Vertex), int>();
         }
 
         /// <summary>
@@ -31,10 +31,22 @@ namespace Graph.Classes
         /// <param name="vertexOne">First vertex</param>
         /// <param name="vertexTwo">Second vertex</param>
         /// <param name="weight">Weight of the edge</param>
-        public void AddEdge(Vertex vertexOne, Vertex vertexTwo, int weight)
+        public void AddDirectedEdge(Vertex vertexOne, Vertex vertexTwo, int weight)
         {
-            WeightList.Add(new Tuple<Vertex, Vertex>(vertexOne, vertexTwo), weight);
+            WeightList.Add((vertexOne, vertexTwo), weight);
             AdjacencyList[vertexOne].Add(vertexTwo);
+        }
+
+        /// <summary>
+        /// Adds undirected edge to two vertices
+        /// </summary>
+        /// <param name="vertexOne">First vertex</param>
+        /// <param name="vertexTwo">Second Vertex</param>
+        /// <param name="weight">Weight of the edge</param>
+        public void AddUndirectedEdge(Vertex vertexOne, Vertex vertexTwo, int weight)
+        {
+            AddDirectedEdge(vertexOne, vertexTwo, weight);
+            AddDirectedEdge(vertexTwo, vertexOne, weight);
         }
 
         /// <summary>

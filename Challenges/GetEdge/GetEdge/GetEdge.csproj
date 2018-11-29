@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Graph">
-      <HintPath>..\..\..\Data-Structures\Graph\Graph\bin\Debug\netcoreapp2.1\Graph.dll</HintPath>
+    <Reference Include="Graphs">
+      <HintPath>..\..\..\Data-Structures\Graph\Graph\bin\Debug\netcoreapp2.1\Graphs.dll</HintPath>
     </Reference>
   </ItemGroup>
 
